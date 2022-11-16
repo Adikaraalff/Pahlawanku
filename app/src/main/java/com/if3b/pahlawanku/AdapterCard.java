@@ -33,7 +33,12 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
         ModelPahlawan pahlawan = dataPahlawan.get(position);
         holder.tvNama.setText(pahlawan.getNama());
         holder.tvTentang.setText(pahlawan.getTentang());
+
         Glide
+                .with(holder.itemView.getContext())
+                .load(pahlawan.getFoto())
+                .centerCrop()
+                .into(holder.ivFoto);
     }
 
     @Override
