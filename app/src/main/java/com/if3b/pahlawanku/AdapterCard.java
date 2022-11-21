@@ -57,7 +57,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
                 kirim.putExtra("xNama", xNama);
                 kirim.putExtra("xTentang", xTentang);
                 kirim.putExtra("xFoto", xFoto);
-                holder.itemView.getContext().startActivities();
+                holder.itemView.getContext().startActivity(kirim);
             }
         });
     }
